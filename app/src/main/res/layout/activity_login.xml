@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Login"
+    tools:context=".Activities.Login"
     android:background="#F1EBEB"
     >
 
@@ -19,7 +19,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,7 +27,6 @@
             android:textStyle="bold"
             android:fontFamily="casual"
             android:textSize="30dp" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +45,6 @@
             android:layout_marginTop="20dp"
             android:text="@string/leer_mas" />
     </LinearLayout>
-
     <com.google.android.gms.common.SignInButton
         android:id="@+id/login_btnIniGoogle"
         android:layout_width="0dp"

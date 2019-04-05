@@ -1,4 +1,4 @@
-package com.devmaufh.itrdegreedays;
+package com.devmaufh.itrdegreedays.Activities;
 
 import android.content.Intent;
 import android.support.annotation.NonNull;
@@ -9,13 +9,13 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.devmaufh.itrdegreedays.R;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.ApiException;
-import com.google.android.gms.signin.SignInClient;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthCredential;
@@ -69,7 +69,6 @@ public class Login extends AppCompatActivity {
                     //Request to firebase
                     FirebaseAuthWithGoogle(account);
                 }
-
             }catch(ApiException e){
 
             }
@@ -114,10 +113,9 @@ public class Login extends AppCompatActivity {
     }
     private void updateUI(FirebaseUser user){
         if(user!=null){
-            //Manipular datos
             Toast.makeText(this, "Updated ui"+user.getDisplayName(), Toast.LENGTH_SHORT).show();
             Toast.makeText(this, "Updated ui"+user.getProviderId(), Toast.LENGTH_SHORT).show();
-            Intent main= new Intent(this,MainActivity.class);
+            Intent main= new Intent(this, MainActivity.class);
             main.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(main);
         }
@@ -126,6 +124,6 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-
+        //Check if login
     }
 }
