@@ -1,0 +1,44 @@
+{
+  "project_info": {
+    "project_number": "938937238974",
+    "firebase_url": "https://itrdegreedays.firebaseio.com",
+    "project_id": "itrdegreedays",
+    "storage_bucket": "itrdegreedays.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:938937238974:android:e046a85d8026242a",
+        "android_client_info": {
+          "package_name": "com.devmaufh.itrdegreedays"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "938937238974-8i8le6nprm2u2kio4c946qiq6momkf10.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devmaufh.itrdegreedays",
+            "certificate_hash": "ff7c8b09befd8faf3c943a54775dbdd607cc9749"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCXQBgPhcSXBTSYa6tZuKD8rym5M1l_oXc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "938937238974-2d146mqguehvu9dh8nq34jbmkvpjqedr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

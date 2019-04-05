@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ITRDegreeDays</string>
+    <string name="welcome_message">ITRDegreeDays</string>
+    <string name="welcome_extended">ITRDegreeDays es una aplicación que te permite calcular las unidades calor de los organismos basandose en el método del seno simple. Solamente necesitas los umbrales del organismo del cuál quieres hacer el calculo, al igual que las temperaturas máxima y mínima</string>
+    <string name="inciarsesion_Google">Ingresar</string>
+    <string name="inciarsesion_anonoymus">Invitado</string>
+    <string name="leer_mas">Leer más</string>
+    <string name="inicia_sesion">Por favor, inicia sesión</string>
+    
+    
+    
+    
+    <string name="default_web_client_id">938937238974-2d146mqguehvu9dh8nq34jbmkvpjqedr.apps.googleusercontent.com</string>
+</resources>
