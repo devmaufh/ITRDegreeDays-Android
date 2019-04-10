@@ -55,6 +55,12 @@ public class FragmentHome extends Fragment {
         rv.setLayoutManager(layoutManager);
         rv.setAdapter(mAdapter);
     }
+
+
+
+
+
+    // Only for test
     private ArrayList<HomeCard> testListHomeCard(){
                 return new ArrayList<HomeCard>(){{
             add(new HomeCard(new Insect("Agrotis ipsilon",26,14),testDates()));
