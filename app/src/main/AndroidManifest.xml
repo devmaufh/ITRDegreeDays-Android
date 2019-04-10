@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionNothing">
+        android:theme="@style/AppTheme">
         <activity android:name=".Activities.Login"
             android:theme="@style/SplashScreen">
             <intent-filter>
@@ -16,7 +16,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activities.MainActivity"
-            android:theme="@style/SplashScreen">
+            android:theme="@style/AppTheme.NoActionBar">
         </activity>
     </application>
 </manifest>

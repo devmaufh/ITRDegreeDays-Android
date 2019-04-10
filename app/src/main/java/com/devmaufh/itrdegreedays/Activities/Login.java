@@ -120,7 +120,6 @@ public class Login extends AppCompatActivity {
             startActivity(main);
         }
     }
-
     @Override
     protected void onStart() {
         super.onStart();

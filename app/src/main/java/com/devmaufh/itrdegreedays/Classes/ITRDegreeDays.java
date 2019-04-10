@@ -93,8 +93,9 @@ public class ITRDegreeDays {
             case 6:r=case_6();break;
             default: return -1;
         }
-        if(r==-1){
-            throw new IllegalThreadStateException("You have an error in your params");
+        if(r==-1){            return r;
+
+            //throw new IllegalThreadStateException("You have an error in your params");
         }else{
             return r;
         }
