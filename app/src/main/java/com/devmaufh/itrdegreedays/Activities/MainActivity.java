@@ -1,5 +1,6 @@
 package com.devmaufh.itrdegreedays.Activities;
 
+import android.arch.persistence.room.Room;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
@@ -11,11 +12,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
 
+import com.devmaufh.itrdegreedays.Database.InsectsDatabase;
 import com.devmaufh.itrdegreedays.Fragments.FragmentAbout;
 import com.devmaufh.itrdegreedays.Fragments.FragmentHome;
 import com.devmaufh.itrdegreedays.Fragments.FragmentSettings;
 import com.devmaufh.itrdegreedays.Fragments.FragmentSync;
 import com.devmaufh.itrdegreedays.R;
+import com.devmaufh.itrdegreedays.Utilities.DatabaseUtilities;
 
 public class MainActivity extends AppCompatActivity {
     private DrawerLayout drawerLayout;
@@ -101,6 +104,7 @@ public class MainActivity extends AppCompatActivity {
     private void bindUI(){
         drawerLayout=(DrawerLayout)findViewById(R.id.home_drawer_layout);
         navigationView=(NavigationView)findViewById(R.id.home_navView);
+        //dbInit();
     }
 
     @Override
@@ -112,4 +116,6 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
+
+
 }

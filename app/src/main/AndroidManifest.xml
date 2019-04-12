@@ -14,7 +14,6 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.devmaufh.itrdegreedays.Activities.MainActivity" />
-                />
         </activity>
         <activity
             android:name=".Activities.Login"
