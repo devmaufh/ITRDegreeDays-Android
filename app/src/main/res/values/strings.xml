@@ -14,12 +14,23 @@
     <string name="menu_about">Leer más</string>
     <string name="default_web_client_id">938937238974-2d146mqguehvu9dh8nq34jbmkvpjqedr.apps.googleusercontent.com</string>
 
+    <string name="tMax">Temperatura máxima*</string>
+    <string name="tMin">Temperatura mínima*</string>
+    <string name="camporeq">Error</string>
+    <string name="guardar">Guardar</string>
+    <string name="Hoy">Hoy</string>
+    <string name="Temp">Temperatura</string>
+    <string name="agregar">Nuevo registro</string>
     <string name="name">Nombre</string>
+    <string name="required">Requerido  </string>
     <string name="umbral_inf">Umbral inferior</string>
     <string name="umbral_sup">Umbral superior</string>
+    <string name="TL">TL</string>
+    <string name="TU">TU</string>
     <string name="unidades_acomuladas">Unidades acomuladas: </string>
     <string name="eliminar">Eliminar</string>
     <string name="que_desea_hacer">¿Qué desea hacer?</string>
+    <string name="registrar">Registrar</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
