@@ -57,22 +57,27 @@ public class Register_in extends AppCompatActivity {
                             return true;
                         }else{
                             tlTMin.setError(getResources().getText(R.string.camporeq));
+                            edTMin.requestFocus();
                             return false;
                         }
                     }else{
                         tlTMax.setError(getResources().getText(R.string.camporeq));
+                        edTMax.requestFocus();
                         return false;
                     }
                 }else{
                     tlTL.setError(getResources().getText(R.string.camporeq));
+                    edTL.requestFocus();
                     return false;
                 }
             }else{
-                tlTU.setError(getResources().getText(R.string.camporeq));    
+                tlTU.setError(getResources().getText(R.string.camporeq));
+                edTU.requestFocus();
                 return false;
             }
         }else{
             tlName.setError(getResources().getText(R.string.camporeq));
+            edName.requestFocus();
             return false;
         }
     }
