@@ -1,7 +1,13 @@
 package com.devmaufh.itrdegreedays.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.design.button.MaterialButton;
+import android.support.design.widget.BottomSheetBehavior;
+import android.support.design.widget.BottomSheetDialog;
+import android.support.design.widget.BottomSheetDialogFragment;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -11,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.devmaufh.itrdegreedays.Activities.Register_in;
 import com.devmaufh.itrdegreedays.Adapters.InsectsAdapter;
 import com.devmaufh.itrdegreedays.Classes.Dates;
 import com.devmaufh.itrdegreedays.Classes.ITRDegreeDays;
@@ -29,19 +36,20 @@ public class FragmentHome extends Fragment {
     private RecyclerView rv;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private MaterialButton btnAdd;
     public FragmentHome() {
         // Required empty public constructor
     }
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
      View view=inflater.inflate(R.layout.fragment_fragment_home, container, false);
      bindUI(view);
+     btnAdd.setOnClickListener(v->showDialog(v));
      return view; //Return fragment view
     }
     private void bindUI(View view) {
         rv=(RecyclerView)view.findViewById(R.id.fh_recyclerView);
+        btnAdd=(MaterialButton)view.findViewById(R.id.fh_btnAddNew);
         fillRecycler(view);
     }
     private void fillRecycler(View view){
@@ -55,6 +63,11 @@ public class FragmentHome extends Fragment {
         rv.setLayoutManager(layoutManager);
         rv.setAdapter(mAdapter);
     }
+    private void showDialog(View view){
+        Toast.makeText(getContext(), "Mostrando bottom sheet", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getContext(),Register_in.class));
+    }
+    // Only for test
     private ArrayList<HomeCard> testListHomeCard(){
                 return new ArrayList<HomeCard>(){{
             add(new HomeCard(new Insect("Agrotis ipsilon",26,14),testDates()));
