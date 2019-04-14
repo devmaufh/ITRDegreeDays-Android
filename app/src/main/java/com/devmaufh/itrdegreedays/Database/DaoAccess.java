@@ -8,20 +8,21 @@ import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
 import com.devmaufh.itrdegreedays.Classes.Dates;
+import com.devmaufh.itrdegreedays.Entities.DatesEntity;
 import com.devmaufh.itrdegreedays.Entities.InsectEntity;
 
 import java.util.List;
 
 @Dao
 public interface DaoAccess {
+
     //Insects Entity
     @Insert
     void insertInsect(InsectEntity insectE);
+
     @Insert
     void insertMultipleInsects(List<InsectEntity> insectList);
-    @Query("Select * from insects")
 
-    void selectAllInsects();
     @Query("Select * from insects")
     LiveData<List<InsectEntity>> getAllInsects();
 
@@ -32,9 +33,8 @@ public interface DaoAccess {
 
     //
     @Insert
-    void insertDate(Dates date);
+    void insertDate(DatesEntity date);
+
     @Query("Select * from dates")
-    void selectAllDates();
-    @Query("Select * from dates")
-    LiveData<List<Dates>> getAllDAtes();
+    LiveData<List<DatesEntity>> getAllDAtes();
 }

@@ -6,13 +6,14 @@ import android.os.AsyncTask;
 
 import com.devmaufh.itrdegreedays.Classes.Dates;
 import com.devmaufh.itrdegreedays.Classes.Insect;
+import com.devmaufh.itrdegreedays.Entities.DatesEntity;
 import com.devmaufh.itrdegreedays.Entities.InsectEntity;
 
 import java.util.List;
 
 public class InsectsRepository {
     private DaoAccess daoAccess;
-    LiveData<List<Dates>> mAllDates;
+    LiveData<List<DatesEntity>> mAllDates;
     LiveData<List<InsectEntity>> mAllInsects;
     InsectsRepository(Application application){
         InsectsDatabase db=InsectsDatabase.getDatabase(application);
@@ -20,7 +21,7 @@ public class InsectsRepository {
         mAllDates=daoAccess.getAllDAtes();
         mAllInsects=daoAccess.getAllInsects();
     }
-    LiveData<List<Dates>> getAllDates(){
+    LiveData<List<DatesEntity>> getAllDates(){
         return mAllDates;
     }
     LiveData<List<InsectEntity>> getAllInsects(){
@@ -29,7 +30,7 @@ public class InsectsRepository {
     public void insertInsect(InsectEntity insectE){
         new InsertAsyncTaskInsect(daoAccess).execute(insectE);
     }
-    public void insertInsect(Dates date){
+    public void insertDate(DatesEntity date){
         new InsertAsyncTaskDate(daoAccess).execute(date);
     }
     private static class InsertAsyncTaskInsect extends AsyncTask<InsectEntity,Void,Void>{
@@ -44,14 +45,14 @@ public class InsectsRepository {
             return null;
         }
     }
-    private static class InsertAsyncTaskDate extends AsyncTask<Dates,Void,Void>{
+    private static class InsertAsyncTaskDate extends AsyncTask<DatesEntity,Void,Void>{
         private DaoAccess mAsyncTaskDao;
 
         InsertAsyncTaskDate(DaoAccess daoAccess){
             mAsyncTaskDao=daoAccess;
         }
         @Override
-        protected Void doInBackground(Dates... dates) {
+        protected Void doInBackground(DatesEntity... dates) {
             mAsyncTaskDao.insertDate(dates[0]);
             return null;
         }

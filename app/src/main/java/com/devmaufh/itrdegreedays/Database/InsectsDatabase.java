@@ -6,10 +6,11 @@ import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
 import com.devmaufh.itrdegreedays.Classes.Dates;
+import com.devmaufh.itrdegreedays.Entities.DatesEntity;
 import com.devmaufh.itrdegreedays.Entities.InsectEntity;
 import com.devmaufh.itrdegreedays.Utilities.DatabaseUtilities;
 
-@Database(entities = {InsectEntity.class, Dates.class},version = 1,exportSchema = false)
+@Database(entities = {InsectEntity.class, DatesEntity.class},version = 1,exportSchema = false)
 public  abstract  class InsectsDatabase extends RoomDatabase {
     public abstract DaoAccess daoAccess();
     private static volatile InsectsDatabase INSTANCE;

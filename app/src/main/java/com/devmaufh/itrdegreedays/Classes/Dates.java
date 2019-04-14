@@ -1,17 +1,9 @@
 package com.devmaufh.itrdegreedays.Classes;
 
-import android.arch.persistence.room.Entity;
-import android.arch.persistence.room.PrimaryKey;
-import android.support.annotation.NonNull;
 
-@Entity(tableName = "dates")
 public class Dates {
-    @PrimaryKey
-     @NonNull
     private String date;
-
-    double tMin,tMax;
-
+    private double tMin,tMax;
     public Dates(String date, double tMax, double tMin) {
         this.date = date;
         this.tMin = tMin;
@@ -20,10 +12,11 @@ public class Dates {
     public String getDate() {
         return date;
     }
-    public double gettMin() {
+    public double get_tMin() {
         return tMin;
     }
-    public double gettMax() {
+
+    public double get_tMax() {
         return tMax;
     }
 }

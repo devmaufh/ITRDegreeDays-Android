@@ -5,7 +5,6 @@ import android.util.Log;
 import com.devmaufh.itrdegreedays.Classes.Dates;
 import com.devmaufh.itrdegreedays.Classes.ITRDegreeDays;
 import com.devmaufh.itrdegreedays.Classes.Insect;
-import com.devmaufh.itrdegreedays.Models.HomeCard;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
@@ -27,10 +26,10 @@ public class DegreeDaysUtilities {
         return x;
     }
     public static double calculateDegreeDay(Insect insect, Dates date){
-        Log.w("UTILS Temp: ",date.gettMax()+"\t"+date.gettMin());
+        Log.w("UTILS Temp: ",date.get_tMax()+"\t"+date.get_tMin());
         Log.w("UTILS Umbr: ",insect.getTU()+"\t"+insect.getTL());
         //return new ITRDegreeDays(26,14,96,21).solve();
-        return new ITRDegreeDays(insect.getTU(),insect.getTL(),date.gettMax(),date.gettMin()).solve();
+        return new ITRDegreeDays(insect.getTU(),insect.getTL(),date.get_tMax(),date.get_tMin()).solve();
     }
     public static int getRandomNumberInRange(int min, int max) {
 
