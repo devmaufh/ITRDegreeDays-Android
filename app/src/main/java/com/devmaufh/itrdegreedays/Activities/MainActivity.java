@@ -120,6 +120,17 @@ public class MainActivity extends AppCompatActivity {
         drawerLayout=(DrawerLayout)findViewById(R.id.home_drawer_layout);
         navigationView=(NavigationView)findViewById(R.id.home_navView);
         //dbInit();
+        mInsectViewModel= ViewModelProviders.of(this).get(InsectViewModel.class);
+        mInsectViewModel.getmAllInsects().observe(this, new Observer<List<InsectEntity>>() {
+            @Override
+            public void onChanged(@Nullable List<InsectEntity> insectEntities) {
+                for(InsectEntity insectEntity: insectEntities){
+                    Toast.makeText(MainActivity.this, "Testing database :'v "+insectEntity.getName(), Toast.LENGTH_LONG).show();
+                    Log.w("BIND",insectEntity.getName());
+                }
+            }
+        });
+
     }
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -134,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
     private InsectViewModel mInsectViewModel;
     private void databaseTest(){
         mInsectViewModel= ViewModelProviders.of(this).get(InsectViewModel.class);
-        InsectEntity test= new InsectEntity();
+        //InsectEntity test= new InsectEntity();
         //test.setName("Testing"+ Calendar.getInstance().getTime());test.setTl(10);test.setTu(109);
         //mInsectViewModel.insertInsect(test);
         mInsectViewModel.getmAllInsects().observe(this, new Observer<List<InsectEntity>>() {
@@ -147,6 +158,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
+    @Override
+    protected void onResume() {
+        super.onResume();
+    }
 }

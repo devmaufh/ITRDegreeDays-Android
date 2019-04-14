@@ -14,6 +14,8 @@
     <string name="menu_about">Leer más</string>
     <string name="default_web_client_id">938937238974-2d146mqguehvu9dh8nq34jbmkvpjqedr.apps.googleusercontent.com</string>
 
+    <string name="validaTu_max_tl">TU debe ser mayor que TL</string>
+    <string name="validaTmax_max_tmin">La temperatura máxima no debe ser menor que la temperatura mínima</string>
     <string name="tMax">Temperatura máxima*</string>
     <string name="tMin">Temperatura mínima*</string>
     <string name="camporeq">Error</string>

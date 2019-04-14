@@ -8,7 +8,9 @@ import com.devmaufh.itrdegreedays.Classes.Insect;
 import com.jjoe64.graphview.series.DataPoint;
 import com.jjoe64.graphview.series.LineGraphSeries;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Random;
 
 public class DegreeDaysUtilities {
@@ -40,5 +42,10 @@ public class DegreeDaysUtilities {
         Random r = new Random();
         return r.nextInt((max - min) + 1) + min;
     }
-
+    public static String getCurrentDate(){
+        Calendar c= Calendar.getInstance();
+        SimpleDateFormat dateFormat=new SimpleDateFormat("dd-MM-yyyy");
+        String dateTime=dateFormat.format(c.getTime());
+        return dateTime;
+    }
 }
